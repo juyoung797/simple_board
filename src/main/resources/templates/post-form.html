@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <title>Document</title>
+</head>
+<body class="container">
+<h1>새 게시글</h1>
+<div th:if="${error}" class="error" th:text="${error}"></div>
+<form th:action="@{/posts/add}"
+      th:object="${postDto}"
+      method="post"
+      class="form-container">
+    <p>
+        <label>
+            제목:
+            <input type="text" th:field="*{title}" />
+        </label>
+    </p>
+    <p>
+        <label>
+            내용:
+            <textarea rows="6" th:field="*{content}"/></textarea>
+        </label>
+    </p>
+    <button type="submit">저장</button>
+    <a th:href="@{/posts}" class="cancel">취소</a>
+</form>
+</body>
+</html>
