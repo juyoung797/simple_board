@@ -5,8 +5,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
-    font-family: 'Ownglyph_meetme-Rg', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
     box-sizing: border-box;
     outline: none;
 }
@@ -44,7 +51,7 @@ input[type="text"], input[type="password"], textarea {
   background: #fffbf8;
 }
 
-button {
+button, .cancel {
   background: #e3c9c1; color: #5a4e4d;
   border: none; padding: 8px 16px; border-radius: 6px;
   cursor: pointer; transition: background 0.3s;
